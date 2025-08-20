@@ -17,12 +17,7 @@
 * **CI/CD Pipelines**: Automated pipelines for testing and deploying code changes. 
 
 # Database Design
-* ****
-## Database Design
-
-### Entities & Fields
-
-- **Users**
+* **Users**
   - id, name, email, password
   - A user can own properties, make bookings, leave reviews, and make payments.
 
