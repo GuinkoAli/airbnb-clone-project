@@ -15,3 +15,29 @@
 * **Redis**: Used for caching and session management.
 * **Docker**: Containerization tool for consistent development and deployment environments.
 * **CI/CD Pipelines**: Automated pipelines for testing and deploying code changes. 
+
+# Database Design
+* ****
+## Database Design
+
+### Entities & Fields
+
+- **Users**
+  - id, name, email, password
+  - A user can own properties, make bookings, leave reviews, and make payments.
+
+- **Properties**
+  - id, user_id, title, description, price, location
+  - A property belongs to a user and can have many bookings and reviews.
+
+- **Bookings**
+  - id, user_id, property_id, start_date, end_date, status
+  - A booking belongs to a user and a property, and has one payment.
+
+- **Payments**
+  - id, booking_id, amount, method, status
+  - A payment is linked to one booking.
+
+- **Reviews**
+  - id, user_id, property_id, rating, comment
+  - A review belongs to a user and a property.
