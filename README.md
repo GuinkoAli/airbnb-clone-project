@@ -79,7 +79,7 @@
 * **Caching and Performance**
   - Redis is used to cache frequently accessed data and manage user sessions efficiently. This reduces response times and improves the overall performance of the application.
 
-## API Documentation Overview
+## API Security
 
 Our backend provides both **REST API** and **GraphQL API** for flexible data access.
 
