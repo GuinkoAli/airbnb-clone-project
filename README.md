@@ -46,7 +46,7 @@
   - A review is attached to a particular user and a property.
 
 ## Feature Breakdown
-Below are the core features implemented in the Airbnb Clone project, along with a short description of how each contributes to the overall system.
+ Below are the core features implemented in the Airbnb Clone project, along with a short description of how each contributes to the overall system.
 
 * **User Management**
     - Handles user registration, login, and profile management. Each user can own properties, make bookings, write reviews, and process payments. -  - Authentication and authorization ensure secure access to the platform.
@@ -79,9 +79,10 @@ Below are the core features implemented in the Airbnb Clone project, along with 
 * **Caching and Performance**
   - Redis is used to cache frequently accessed data and manage user sessions efficiently. This reduces response times and improves the overall performance of the application.
 
-# API Documentation Overview
+## API Documentation Overview
 
 Our backend provides both **REST API** and **GraphQL API** for flexible data access.
+
 
 - **REST API:** Detailed documentation will be available via OpenAPI/Swagger, covering all endpoints for users, properties, bookings, payments, and reviews.
 - **GraphQL API:** Provides a powerful query language for retrieving and manipulating data with more flexibility.
@@ -92,44 +93,55 @@ Our backend provides both **REST API** and **GraphQL API** for flexible data acc
 
 Below is an overview of the available REST API endpoints grouped by resource.
 
- **Users**
-- `GET /users/` – List all users  
-- `POST /users/` – Create a new user  
-- `GET /users/{user_id}/` – Retrieve a specific user  
-- `PUT /users/{user_id}/` – Update a specific user  
-- `DELETE /users/{user_id}/` – Delete a specific user  
+* **Users**
+  - `GET /users/` – List all users  
+  - `POST /users/` – Create a new user  
+  - `GET /users/{user_id}/` – Retrieve a specific user  
+  - `PUT /users/{user_id}/` – Update a specific user  
+  - `DELETE /users/{user_id}/` – Delete a specific user  
 
-#### Properties
-- `GET /properties/` – List all properties  
-- `POST /properties/` – Create a new property  
-- `GET /properties/{property_id}/` – Retrieve a specific property  
-- `PUT /properties/{property_id}/` – Update a specific property  
-- `DELETE /properties/{property_id}/` – Delete a specific property  
+* **Properties**
+  - `GET /properties/` – List all properties  
+  - `POST /properties/` – Create a new property  
+  - `GET /properties/{property_id}/` – Retrieve a specific property  
+  - `PUT /properties/{property_id}/` – Update a specific property  
+  - `DELETE /properties/{property_id}/` – Delete a specific property  
 
-#### Bookings
-- `GET /bookings/` – List all bookings  
-- `POST /bookings/` – Create a new booking  
-- `GET /bookings/{booking_id}/` – Retrieve a specific booking  
-- `PUT /bookings/{booking_id}/` – Update a specific booking  
-- `DELETE /bookings/{booking_id}/` – Delete a specific booking  
+* **Bookings**
+  - `GET /bookings/` – List all bookings  
+  - `POST /bookings/` – Create a new booking  
+  - `GET /bookings/{booking_id}/` – Retrieve a specific booking  
+  - `PUT /bookings/{booking_id}/` – Update a specific booking  
+  - `DELETE /bookings/{booking_id}/` – Delete a specific booking  
 
-#### Payments
-- `POST /payments/` – Process a payment  
+* **Payments**
+  - `POST /payments/` – Process a payment  
 
-#### Reviews
-- `GET /reviews/` – List all reviews  
-- `POST /reviews/` – Create a new review  
-- `GET /reviews/{review_id}/` – Retrieve a specific review  
-- `PUT /reviews/{review_id}/` – Update a specific review  
-- `DELETE /reviews/{review_id}/` – Delete a specific review  
-
----
-
-### GraphQL API
-A GraphQL endpoint is also available for developers who prefer flexible queries and single-endpoint access. It allows requesting exactly the data needed and combining multiple resources in one request.
+* **Reviews**
+  - `GET /reviews/` – List all reviews  
+  - `POST /reviews/` – Create a new review  
+  - `GET /reviews/{review_id}/` – Retrieve a specific review  
+  - `PUT /reviews/{review_id}/` – Update a specific review  
+  - `DELETE /reviews/{review_id}/` – Delete a specific review  
 
 ---
 
-### Next Steps
-- Add OpenAPI/Swagger documentation for detailed request/response schemas.
-- Secure all endpoints with proper authentication and authorization as described in the API Security section.
+## CI/CD Pipeline
+
+Continuous Integration and Continuous Deployment (CI/CD) pipelines automate the process of building, testing, and deploying code changes. This ensures that new features, bug fixes, and updates can be delivered quickly, safely, and consistently.
+
+* **Why CI/CD is Important**
+   - **Faster Development:** Automatically tests and integrates changes, reducing manual work and speeding up releases.
+   - **Improved Quality:** Ensures that all changes pass automated tests before deployment, reducing the risk of bugs in production.
+   - **Consistency:** Provides a standardized process for deploying code across different environments (development, staging, production).
+   - **Early Issue Detection:** Continuous testing helps detect and fix issues before they affect users.
+
+* **Tools Used**
+   - **GitHub Actions:** Automates workflows such as running tests, building Docker images, and deploying applications.
+   - **Docker:** Used to containerize the application for consistent environments across development and production.
+   - **CI/CD Pipelines:** Integrates automated testing, security checks, and deployment triggers.
+
+In this project, a CI/CD pipeline can be configured to:
+1. Run automated tests when code is pushed or a pull request is opened.
+2. Build and package the application using Docker.
+3. Deploy the container to a server or cloud platform automatically after passing all checks.
